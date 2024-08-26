@@ -16,4 +16,5 @@ btn.addEventListener("click", () => {
   addNewItem(lists);
   console.log(lists);
 })
-
+// reading data from local storage
+//console.log(Object.keys(JSON.parse(localStorage.getItem("czfz"))))
