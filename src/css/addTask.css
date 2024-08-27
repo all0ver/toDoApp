@@ -27,3 +27,85 @@
   right: 1rem;
   cursor: pointer;
 }
+
+.title {
+  border: none;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 2rem;
+  outline: none;
+  border-bottom: 3px solid white;
+}
+
+.title:focus {
+  border-bottom: 3px solid #007FF6;
+}
+
+.desc {
+  padding: 1rem;
+  border: none;
+  outline: none;
+  resize: vertical;
+}
+
+.date {
+  border: 2px solid #007FF6;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 8rem;
+}
+
+
+input[type='radio'] {
+  display: none;
+}
+
+.radioElements {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.radioElements label {
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-style:solid;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+}
+
+.lLow {
+  border-color: #008000;
+  color: #008000;
+}
+.lMedium {
+  border-color: #FFA500;
+  color: #FFA500;
+}
+.lHigh {
+  border-color: #FF0000;
+  color: #FF0000;
+}
+
+#low:checked + .lLow {
+  border-color: #008000;
+  color: white;
+  background: #008000;
+}
+#medium:checked + .lMedium {
+  border-color: #FFA500;
+  color: white;
+  background: #FFA500; 
+}
+#high:checked + .lHigh {
+  border-color: #FF0000;
+  color: white;
+  background: #FF0000; 
+}
+.subRadio {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  width: 100%;
+}
