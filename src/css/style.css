@@ -25,7 +25,7 @@ header {
 .userImg {
   width: 1.5rem;
   height: 1.5rem;
-  border:solid 0.25rem #007FF6;
+  border: solid 0.25rem #007FF6;
   border-right: solid 0.25rem white;
   border-top: solid 0.25rem white;
   border-radius: 50%;
@@ -63,9 +63,29 @@ nav {
   padding: 0;
 }
 
+.addTask p,
+.lists p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.addTask img,
+.lists img {
+  width: 16px;
+  height: 16px;
+}
+
+.addList {
+  color: #007FF6;
+}
+
 .main {
   padding: 2rem 8rem;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
+
+
