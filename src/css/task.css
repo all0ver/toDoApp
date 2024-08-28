@@ -1,0 +1,51 @@
+.main {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 82vh;
+}
+
+.task {
+  padding: 1rem;
+  border-left: 3px solid;
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+  position: relative;
+}
+
+.taskTopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskCheckbox {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background: url("../img/cross.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.taskCheckbox:checked {
+  background: url("../img/check.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.checkboxDiv {
+  position: relative;
+}
+
+.lineThrough {
+  text-decoration: line-through;
+  background: #d2d2d2;
+}

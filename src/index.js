@@ -1,5 +1,6 @@
 import './css/style.css';
 import './css/addTask.css';
+import './css/task.css';
 
 import { addNewItem } from './logic/add.js';
 import { addTask } from './DOM/addTask.js';
@@ -30,8 +31,7 @@ addTaskBtn.addEventListener("click", () => {
   const addTaskFormBtn = document.querySelector('.addTaskFormBtn');
   addTaskFormBtn.addEventListener("click", (event) => {
     event.preventDefault();
-    addNewItem(lists);
-    console.log(lists);
+    addNewItem();
     closeFunc();
     return;
   })

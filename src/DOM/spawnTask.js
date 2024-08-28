@@ -6,17 +6,39 @@ export const spawn = () => {
     const desc = data.desc;
     const date = data.date;
     const priority = data.priority;
-    const done = data.done;
+    let done = data.done;
     console.log(data);
-    //console.log(title);
-    //console.log(desc);
-    //console.log(date);
-    //console.log(priority);
     const main = document.querySelector(".main");
     const task = document.createElement("div");
-    task.innerHTML += `<p>${title}</p>
-      <p>${desc}, ${date}, ${priority}, ${done}
-      `;
+    task.classList.add("task");
+    if (priority == 'low') {
+      task.style.borderColor = "#008000";
+    } else if (priority == 'medium') {
+      task.style.borderColor = "#FFA500";
+    } else if (priority == 'high') {
+      task.style.borderColor = '#FF0000';
+    }
+    task.innerHTML += `      
+        <div class="taskTopBar">
+          <p class="taskTitle">${title}</p>
+          <p class="taskDate">${date}</p>
+        </div>
+
+        <p class="taskDesc">${desc}</p>
+        <input type="checkbox" name="done" value="false" class="taskCheckbox">`;
     main.appendChild(task);
+
+    // text line-through
+    const checkbox = task.querySelector(".taskCheckbox");
+    checkbox.addEventListener("click", () => {
+      checkbox.parentNode.classList.toggle("lineThrough");
+      if (done == false) {
+        done = true;
+      } else {
+        done = false;
+      }
+      console.log(title);
+      console.log(done);
+    })
   }
 }
