@@ -4,5 +4,6 @@ export class toDoItem {
     this.desc = description;
     this.date = date;
     this.priority = priority;
+    this.done = false;
   }
 }
