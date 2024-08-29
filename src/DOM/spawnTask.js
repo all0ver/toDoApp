@@ -1,4 +1,6 @@
 export const spawn = () => {
+  const main = document.querySelector(".main");
+  main.innerHTML = '';
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
     const data = (JSON.parse(localStorage.getItem(key)));
@@ -8,7 +10,6 @@ export const spawn = () => {
     const priority = data.priority;
     let done = data.done;
     console.log(data);
-    const main = document.querySelector(".main");
     const task = document.createElement("div");
     task.classList.add("task");
     if (priority == 'low') {

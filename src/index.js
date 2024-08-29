@@ -33,6 +33,8 @@ addTaskBtn.addEventListener("click", () => {
     event.preventDefault();
     addNewItem();
     closeFunc();
+
+    spawn();
     return;
   })
 
@@ -47,8 +49,4 @@ addTaskBtn.addEventListener("click", () => {
   close.addEventListener("click", closeFunc);
 })
 
-
-//reading data from local storage
-//console.log(Object.keys(JSON.parse(localStorage.getItem("czfz"))))
-//localStorage.clear();
 spawn();
